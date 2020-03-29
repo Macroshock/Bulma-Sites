@@ -1,0 +1,14 @@
+{
+  "name": "bulma",
+  "version": "1.0.0",
+  "description": "Set of sites designed with Bulma",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Santiago Tamashiro",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
