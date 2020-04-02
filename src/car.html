@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Car landing page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="/css/debug.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+      .hero {
+        background: black url(images/car.jpg) center / cover;
+      }
+
+      .is-active {
+        background-color: rgba(255, 255, 255, 0.75);
+      }
+
+      #navbar-white.is-active {
+        background-color: rgba(255, 255, 255, 0.9);
+      }
+
+    </style>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Hero -->
+    <section class="hero is-fullheight">
+      <!-- Navbar -->
+      <div id="navbar-white" class="is-overlay" style="height: 52px"></div>
+      <nav class="hero-head navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#">
+            <img src="images/porsche_logo.png" width="162" height="48">
+          </a>
+      
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbar" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item has-text-black"><b>Home</b></a>
+            <a class="navbar-item has-text-black"><b>Models</b></a>
+            <a class="navbar-item has-text-black"><b>Pricing</b></a>
+            <a class="navbar-item has-text-black"><b>Shop</b></a>
+          </div>
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button has-text-white has-background-black">
+                  <strong>Sign up</strong>
+                </a>
+                <a class="button is-light has-text-black">
+                  <strong>Log in</strong>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <footer class="hero-foot">
+        <div class="is-overlay has-text-centered is-hidden-touch" style="top: 525px;">
+          <div class="columns is-desktop">
+            <div class="column is-4">
+              <h1 class="has-text-white title is-1">Panamera Turbo</h1>
+            </div>
+            <div class="column is-2 is-offset-2">
+              <div class="has-text-white is-size-3">306 km/h</div>
+              <div class="has-text-white is-size-4">Max speed</div>
+            </div>
+            <div class="column is-2" style="border-left: 2px solid white;">
+              <div class="has-text-white is-size-3">550 hp</div>
+              <div class="has-text-white is-size-4">Horsepower</div>
+            </div>
+            <div class="column is-2" style="border-left: 2px solid white;">
+              <div class="has-text-white is-size-3"><i class="fas fa-tachometer-alt"></i> 3.6 s</div>
+              <div class="has-text-white is-size-4">Acceleration</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="is-overlay has-text-centered is-hidden-desktop" style="top: 485px;">
+          <div class="columns is-mobile">
+            <div class="column is-8 is-offset-2">
+              <h1 class="has-text-white title is-2">Panamera Turbo</h1>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-4">
+              <div class="has-text-white is-size-4">306 km/h</div>
+              <div class="has-text-white is-size-5">Max speed</div>
+            </div>
+            <div class="column is-4" style="border-left: 2px solid white;">
+              <div class="has-text-white is-size-4">550 hp</div>
+              <div class="has-text-white is-size-5">Horsepower</div>
+            </div>
+            <div class="column is-4" style="border-left: 2px solid white;">
+              <div class="has-text-white is-size-4"><i class="fas fa-tachometer-alt"></i> 3.6 s</div>
+              <div class="has-text-white is-size-5">Acceleration</div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const $navbarWhite = document.getElementById('navbar-white')
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0)
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+          // Add a click event on each of them
+          $navbarBurgers.forEach( el => {
+            el.addEventListener('click', () => {
+              $navbarWhite.classList.toggle('is-active')
+
+              // Get the target from the "data-target" attribute
+              const target = el.dataset.target
+              const $target = document.getElementById(target)
+
+              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+              el.classList.toggle('is-active')
+              $target.classList.toggle('is-active')
+            })
+          })
+        }
+      })
+    </script>
+  </body>
+</html>
