@@ -17,6 +17,10 @@ app.get('/car', function (req, res) {
   res.sendFile(path.join(__dirname, 'src/car.html'))
 })
 
+app.get('/documentation', function (req, res) {
+  res.sendFile(path.join(__dirname, 'src/documentation.html'))
+})
+
 app.listen(3000, function () {
   console.log('Running on http://localhost:3000')
 })
